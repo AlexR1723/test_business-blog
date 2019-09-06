@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'test_business_blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME':'postgres',
         'USER': 'postgres',
         'PASSWORD':'ppass1723',
@@ -136,12 +136,11 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 # Extra lookup directories for collectstatic to find static files
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),
-)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 #  Add configuration for static files storage using whitenoise
 #STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-import dj_database_url
-prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES['postgresql_psycopg2'].update(prod_db)
+#import dj_database_url
+#prod_db  =  dj_database_url.config(conn_max_age=500)
+#DATABASES['postgresql_psycopg2'].update(prod_db)

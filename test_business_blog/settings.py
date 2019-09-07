@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import sys
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -130,8 +131,8 @@ STATIC_URL = '/static/'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 #PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
-PROJECT_ROOT   =   os.path.abspath(os.path.dirname(__file__)+"../../../")
-STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
+#PROJECT_ROOT   =   os.path.abspath(os.path.dirname(__file__)+"../../../")
+#STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 

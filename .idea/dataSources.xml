@@ -7,7 +7,7 @@
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/test_business_blog/settings.py</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/postgres</jdbc-url>
+      <jdbc-url>jdbc:postgresql://ec2-54-247-72-30.eu-west-1.compute.amazonaws.com:5432/d167r9uq2uc1ln</jdbc-url>
     </data-source>
   </component>
 </project>

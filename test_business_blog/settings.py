@@ -135,10 +135,10 @@ USE_TZ = True
 #PROJECT_ROOT   =   os.path.abspath(os.path.dirname(__file__)+"../../../")
 PROJECT_ROOT   =   os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'static')
-#MEDIA_ROOT  =   os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT  =   os.path.join(BASE_DIR, 'media')
 STATIC_URL = '/static/'
 #STATIC_URL = '/static/'
-#MEDIA_URL = '/media/'
+MEDIA_URL = '/media/'
 
 # Extra lookup directories for collectstatic to find static files
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)

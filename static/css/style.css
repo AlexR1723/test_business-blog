@@ -1,3 +1,31 @@
+@font-face{
+font-family: 'Blogger Sans';
+src: url('/static/fonts/Blogger Sans.otf');
+url('/static/fonts/Blogger Sans.otf') format('otf');
+font-weight: normal;
+font-style: normal;
+}
+@font-face{
+font-family: 'Blogger Sans';
+src: url('/static/fonts/Blogger Sans-Bold.otf');
+url('/static/fonts/Blogger Sans-Bold.otf') format('otf');
+font-weight: bold;
+font-style: normal;
+}
+@font-face{
+font-family: 'Blogger Sans';
+src: url('/static/fonts/Blogger Sans-Light.otf');
+url('/static/fonts/Blogger Sans-Light.otf') format('otf');
+font-weight: 200;
+font-style: normal;
+}
+@font-face{
+font-family: 'Houschka Rounded Bold';
+src: url('/static/fonts/houchka.otf');
+url('/static/fonts/houchka.otf') format('otf');
+font-weight: bold;
+font-style: normal;
+}
 .header_bg{
 	background-color: #00010b;
 	margin: 0px;
@@ -6,47 +34,56 @@
 .name{
 	color: #be222f;
 	margin: 0px;
-	font-size: 25px;
-	font-weight: 700;
-	
+	font-size: 35px;
+	font-weight: bold;
+	font-family: "Houschka Rounded Bold";
 
 }
-.hbar{
-	color: white;
-}
+/*.hbar{*/
+/*	color: white;*/
+/*}*/
 .lb_events{
 	color: black;
-	font-size: 35px;
-	font-weight: 500;
+	font-size: 60px;
+	/*font-weight: 500;*/
 	text-align: center;
+	font-family: "Houschka Rounded Bold";
 }
 .ev_name{
 	color: black;
-	font-size: 25px;
-	font-weight: 700;
+	font-size: 30px;
+	/*font-weight: 700;*/
+	font-family: "Houschka Rounded Bold";
 	margin: 0px;
 }
 .ev_name_date{
 	background-color: #c6c6c6;
 }
-.ev_date_d{
+.ev_date{
 	color: #8b0017;
-	font-size: 30px;
-	font-weight: 700;
+	font-size: 25px;
+	/*font-weight: 700;*/
+	font-family: "Houschka Rounded Bold";
 	margin: 0px;
 	width: 100%;
 	text-align: center;
 }
-.ev_date_m{
-	color: black;
+.ev_text{
+	font-family: "Blogger Sans";
+	font-weight: normal;
 	font-size: 20px;
-	font-weight: 700;
-	margin: 0px;
 }
+/*.ev_date_m{*/
+/*	color: black;*/
+/*	font-size: 20px;*/
+/*	font-weight: 700;*/
+/*	margin: 0px;*/
+/*}*/
 .ev_place{
 	color: #0a6b7c;
 	font-size: 25px;
-	font-weight: 500;
+	font-weight: bold;
+	font-family: "Blogger Sans";
 	margin: 0px;
 	margin-left: 10px;
 }
@@ -105,6 +142,7 @@
 	width: 100%;
 	text-align: center;
 	margin: 0px;
+	font-family: "Houschka Rounded Bold";
 }
 .it2{
 	/*font-size: 40px;*/
@@ -112,7 +150,12 @@
 	width: 100%;
 	text-align: center;
 	margin: 0px;
+	font-family: "Houschka Rounded Bold";
 }
+/*.lb_news{*/
+/*	font-family: "Houschka Rounded Bold";*/
+/*	font-size: 50px;*/
+/*}*/
 .news_layer{
 	color: white;
 	width: 80%;
@@ -126,12 +169,15 @@
 }
 .news_name{
 	font-size: 30px;
-	font-weight: 500;
+	font-weight: bold;
+	font-family: "Blogger Sans";
 }
 .news_line{
 	width: 100%;
 	margin: 0px;
 	/*color: white;*/
+	font-family: "Blogger Sans";
+	font-weight: 200;
 	border-top: 3px solid white;
 }
 .news_text{
@@ -155,10 +201,13 @@
 	color: black;
 	text-decoration: underline;
 	font-size: 30px;
-	font-weight: 500;
+	font-weight: bold;
+	font-family: "Blogger Sans";
 }
 .article_text{
 	font-size: 20px;
+	font-family: "Blogger Sans";
+	font-weight: 200;
 }
 .footer{ 
 	background-color: black;
@@ -199,5 +248,21 @@
 .news_carousel{
 	width: 90%;
 	margin: auto;
+}
+
+
+
+#testimonials {
+    overflow: visible !important;
+    visibility: hidden;
+    height: 450px;
+}
+#testimonials .card {
+    min-height: 270px;
+    width: 400px;
+    padding: 12px;
+    text-align: center;
+    background-color: deepskyblue;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
 }
 

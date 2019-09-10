@@ -34,7 +34,7 @@ font-style: normal;
 .name{
 	color: #be222f;
 	margin: 0px;
-	font-size: 35px;
+	/*font-size: 35px;*/
 	font-weight: bold;
 	font-family: "Houschka Rounded Bold";
 
@@ -100,6 +100,7 @@ font-style: normal;
   .it2 { font-size: 20px; }
   .event{width: 90%;}
   .article{width: 90%;}
+  .name{font-size: 35px;}
 }
 
 @media (min-width: 768px) {
@@ -107,6 +108,7 @@ font-style: normal;
   .it2 { font-size: 25px; }
   .event{width: 70%;}
   .article{width: 70%;}
+  .name{font-size: 25px;}
 }
 
 @media (min-width: 992px) {
@@ -114,6 +116,7 @@ font-style: normal;
   .it2 { font-size: 30px; }
   .event{width: 45%;}
   .article{width: 45%;}
+  .name{font-size: 30px;}
 }
 
 @media (min-width: 1200px) {
@@ -121,6 +124,7 @@ font-style: normal;
   .it2 { font-size: 35px; }
   .event{width: 30%;}
   .article{width: 30%;}
+  .name{font-size: 30px;}
 }
 .banner{
 	position: relative;

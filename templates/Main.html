@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- <link rel="stylesheet"  href="font-awesome.min.css" > -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{#    <link rel="stylesheet" href="{% static 'css/jquery-3.4.1.min.js' %}">#}
+
+
     <title>Блог</title>
 </head>
 
@@ -30,13 +33,13 @@
                         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link hbar" href="#">Уже скоро</a>
+                                    <a class="nav-link hbar" href="#events">Уже скоро</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Новости</a>
+                                    <a class="nav-link" href="#news">Новости</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Статьи</a>
+                                    <a class="nav-link" href="#articles">Статьи</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Отзывы</a>
@@ -56,7 +59,7 @@
         </div>
         <img class="img_top" src="{% static 'image/image.jpg' %}">
     </div>
-    <div class="events">
+    <div id="events" class="events">
         <label class="lb_events w-100 my-5">УЖЕ СКОРО</label>
         <div class="row px-3 m-0 justify-content-center" style="background-color: #f2f2f2">
 
@@ -64,35 +67,35 @@
             <div class="mt-4 event p-0 mx-3">
                 <!-- <div class="col-3 mt-4 event p-0 mx-3"> -->
                 <div class="row m-0 ev_name_date py-3 px-4 align-items-center">
-                    <div class="col-8 p-0">
-{#                        <label class="ev_name">{{ i.pop }}</label>#}
+                    <div class="col-12 p-0">
+                        <label class="ev_name">{{ i.pop }}</label>
                     </div>
-                    <div class="col-4 p-0 text-center">
+                    <div class="col-12 p-0 text-center">
+                        <label class="ev_date_d">{{ i.pop }} / {{ i.pop }}</label>
 {#                        <label class="ev_date_d">{{ i.pop }}</label>#}
-{#                        <label class="ev_date_m">{{ i.pop }}</label>#}
 
                     </div>
                 </div>
                 <div class="row m-0 align-items-center pt-3 px-4">
-{#                    <i class="fas fa-flag"></i><label class="ev_place">{{ i.pop }}</label>#}
+                    <i class="fas fa-flag"></i><label class="ev_place">{{ i.pop }}</label>
                 </div>
                 <div class="row m-0 py-3 justify-content-center px-4">
-{#                    <label>{{ i.pop }}</label>#}
+                    <label>{{ i.pop }}</label>
                 </div>
             </div>
             {% endfor %}
 
         </div>
     </div>
-    <div class="news_layer my-5 align-items-center">
+    <div id="news" class="news_layer my-5 align-items-center">
         <!-- <div class="row m-0"> -->
         <!-- <div class="col-11"> -->
         <!-- </div> -->
 
-        {% for i in events %}
+        {% for i in news %}
             <div class="row my-4 news1 align-items-center">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-4 p-0">
-                <img class="img_news" src="{% static 'image/image.png' %}">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-4 p-0" style="overflow: hidden">
+                <img class="img_news h-100" src="{{ i.pop }}">
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-8">
                 <div class="row m-0">
@@ -142,7 +145,7 @@
         </div>
          </div> -->
     </div>
-    <div class="articles">
+    <div id="atricles" class="articles">
         <div class="row m-0 justify-content-center">
             {% for i in articles %}
             <div class="mt-4 article p-0 mx-3">
@@ -262,6 +265,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2c9fd467ea.js"></script>
+    <script src="{% static 'css/jquery-3.4.1.min.js' %}"></script>
+    <script type="text/javascript">
+		$(document).ready(function(){
+		$("#navbarNav").on("click","a", function (event) {
+		event.preventDefault();
+		var id = $(this).attr('href'),
+		top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 1500);
+		});
+		});
+	</script>
 </body>
 
 </html>

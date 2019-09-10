@@ -18,16 +18,25 @@ def Main(request):
         ev = []
         ev.append(i.text)
         ev.append(i.place_city+','+i.place_country)
-        # ev.append(i.date_end.strftime("%d %b %y"))
-        # ev.append(i.date_start.strftime("%d %b %y"))
+        ev.append(i.date_end.strftime("%d %b %y"))
+        ev.append(i.date_start.strftime("%d %b %y"))
         #ev.append(i.date_end.month)
         #ev.append(i.date_end.day)
         #ev.append(i.date_start.month)
         #ev.append(i.date_start.day)
-        # ev.append(i.name)
+        ev.append(i.name)
         #print(ev)
         events.append(ev)
     print(events[0])
+
+    news1=models.News.objects.all()
+    news=[]
+    for i in news1:
+        new=[]
+        new.append(i.text)
+        new.append(i.name)
+        new.append(i.img_path)
+        news.append(new)
 
     articles1=models.Articles.objects.all()
     articles=[]

@@ -8,6 +8,6 @@ from Main.models import *
 # from json import json_util
 #from django.core.mail import send_mail
 
-def index(request):
+def Main(request):
     events=Events.objects.all()
     return render(request, 'Main.html', locals())

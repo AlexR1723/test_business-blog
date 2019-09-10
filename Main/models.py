@@ -154,7 +154,7 @@ class Reviews(models.Model):
     city = models.CharField(max_length=50, blank=True, null=True)
     country = models.CharField(max_length=50, blank=True, null=True)
     text = models.CharField(max_length=500, blank=True, null=True)
-    img_path = models.CharField(max_length=500, blank=True, null=True)
+    img_path = models.ImageField(upload_to="upload/", blank=True, null=True)
     position = models.CharField(max_length=100, blank=True, null=True)
 
     class Meta:

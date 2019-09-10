@@ -51,17 +51,17 @@
     </div>
 
 
-    <div id="events" class="events">
+    <div id="events" class="events mb-5">
         <label class="lb_events w-100 my-5">УЖЕ СКОРО</label>
         <div class="row px-3 m-0 justify-content-center" style="background-color: #f2f2f2">
             {% for i in events %}
             <div class="mt-4 event p-0 mx-3">
                 <div class="row m-0 ev_name_date py-3 px-4 align-items-center">
-                    <div class="col-12 p-0">
+                    <div class="col-12 p-0 text-center">
                         <label class="ev_name">{{ i.pop }}</label>
                     </div>
                     <div class="col-12 p-0 text-center">
-                        <label class="ev_date_d">{{ i.pop }} / {{ i.pop }}</label>
+                        <label class="ev_date_d"> С {{ i.pop }} по {{ i.pop }}</label>
                     </div>
                 </div>
                 <div class="row m-0 align-items-center pt-3 px-4">
@@ -76,57 +76,45 @@
     </div>
 
 
-    <div id="news" class="news_layer my-5 align-items-center">
-        {% for i in news %}
-            <div class="row my-4 news1 align-items-center">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-4 p-0" style="overflow: hidden">
-                <img class="img_news h-100" src="{{ i.pop }}">
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-8">
-                <div class="row m-0">
-                    <label class="news_name">{{ i.pop }}</label>
-                    <hr class="news_line">
-                    <label class="news_text">{{ i.pop }}</label>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
+{#    <div id="news" class="news_layer my-5 align-items-center">#}
+{#        {% for i in news %}#}
+{#            <div class="row my-4 news1 align-items-center">#}
+{#            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-4 p-0" style="overflow: hidden">#}
+{#                <img class="img_news h-100" src="{{ i.pop }}">#}
+{#            </div>#}
+{#            <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-8">#}
+{#                <div class="row m-0">#}
+{#                    <label class="news_name">{{ i.pop }}</label>#}
+{#                    <hr class="news_line">#}
+{#                    <label class="news_text">{{ i.pop }}</label>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#        {% endfor %}#}
+{#    </div>#}
 
 
-    <div class="bd-example">
+    <div id="news" class="news_carousel">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        {% for i in news_slide %}
+{#      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>#}
+{#      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>#}
+{#      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>#}
+            <li data-target="#carouselExampleCaptions" data-slide-to="{{ i.pop }} " class="{{ i.pop }}"></li>
+        {% endfor %}
     </ol>
     <div class="carousel-inner">
-
-{#      <div class="carousel-item active">#}
-{#        <img src="..." class="d-block w-100" alt="...">#}
-{#        <div class="carousel-caption d-none d-md-block">#}
-{#          <h5>First slide label</h5>#}
-{#          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>#}
-{#        </div>#}
-{#      </div>#}
         {% for i in news %}
-      <div class="carousel-item">
+      <div class="carousel-item {{ i.pop }}">
         <img src="{{ i.pop }}" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption d-none d-md-block car_text">
           <h5>{{ i.pop }}</h5>
           <p>{{ i.pop }}</p>
         </div>
       </div>
         {% endfor %}
-{#      <div class="carousel-item">#}
-{#        <img src="..." class="d-block w-100" alt="...">#}
-{#        <div class="carousel-caption d-none d-md-block">#}
-{#          <h5>Third slide label</h5>#}
-{#          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>#}
-{#        </div>#}
-{#      </div>#}
-{#    </div>#}
+    </div>
     <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -139,7 +127,7 @@
 </div>
 
 
-    <div id="articles" class="articles">
+    <div id="articles" class="articles mt-5">
         <div class="row m-0 justify-content-center">
             {% for i in articles %}
             <div class="mt-4 article p-0 mx-3">

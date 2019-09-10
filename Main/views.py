@@ -10,7 +10,7 @@ from Main import models
 
 def Main(request):
     events1=models.Events.objects.all()
-    print(events1)
+   # print(events1)
     events = []
     for i in events1:
         #print(i.name)
@@ -18,8 +18,8 @@ def Main(request):
         ev = []
         ev.append(i.text)
         ev.append(i.place_city+','+i.place_country)
-        ev.append(i.date_end.strftime("%d %b %y"))
-        ev.append(i.date_start.strftime("%d %b %y"))
+        ev.append(i.date_end.strftime("%#d %b %y"))
+        ev.append(i.date_start.strftime("%#d %b %y"))
         #ev.append(i.date_end.month)
         #ev.append(i.date_end.day)
         #ev.append(i.date_start.month)
@@ -27,17 +27,38 @@ def Main(request):
         ev.append(i.name)
         #print(ev)
         events.append(ev)
-    print(events[0])
+    #print(events[0])
 
     news1=models.News.objects.all()
     news=[]
+    ch=False;
     for i in news1:
         new=[]
         new.append(i.text)
         new.append(i.name)
         new.append(i.img_path)
+        if (ch==False):
+            new.append('active')
+            ch=True
+        else:
+            new.append('')
+
         news.append(new)
 
+    news_slide=[]
+    cnt=len(news1)
+    ch1=False
+    print(cnt)
+    i=0
+    while i < cnt:
+        news_slide1=[]
+        news_slide1.append(i)
+        if ch1==False:
+            news_slide1.append('active')
+        else:
+            news_slide1.append('')
+        news_slide.append(news_slide1)
+        i=i+1
     articles1=models.Articles.objects.all()
     articles=[]
     for i in articles1:

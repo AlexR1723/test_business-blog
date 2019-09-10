@@ -9,5 +9,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://ec2-54-247-72-30.eu-west-1.compute.amazonaws.com:5432/d167r9uq2uc1ln</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="d167r9uq2uc1ln@ec2-54-247-72-30.eu-west-1.compute.amazonaws.com" uuid="8993b4bc-965d-4a16-ab1e-c57bc78c81cf">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-54-247-72-30.eu-west-1.compute.amazonaws.com:5432/d167r9uq2uc1ln</jdbc-url>
+    </data-source>
   </component>
 </project>

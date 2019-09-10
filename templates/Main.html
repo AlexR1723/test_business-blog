@@ -2,8 +2,9 @@
 <html>
 
 <head>
+     <meta charset="utf-8">
     {% load staticfiles %}
-    <meta charset="utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- <link rel="stylesheet"  href="font-awesome.min.css" > -->
@@ -53,65 +54,34 @@
             <label class="it1">ХОЧЕШЬ СТАТЬ УСПЕШНЫМ?</label>
             <label class="it2">СТАНЬ ИМ!</label>
         </div>
-        <img class="img_top" src="image.jpg">
+        <img class="img_top" src="{% static 'image/image.jpg' %}">
     </div>
     <div class="events">
         <label class="lb_events w-100 my-5">УЖЕ СКОРО</label>
         <div class="row px-3 m-0 justify-content-center" style="background-color: #f2f2f2">
+
+            {% for i in events %}
             <div class="mt-4 event p-0 mx-3">
                 <!-- <div class="col-3 mt-4 event p-0 mx-3"> -->
                 <div class="row m-0 ev_name_date py-3 px-4 align-items-center">
                     <div class="col-8 p-0">
-                        <label class="ev_name">Построй свой путь</label>
+{#                        <label class="ev_name">{{ i.pop }}</label>#}
                     </div>
                     <div class="col-4 p-0 text-center">
-                        <label class="ev_date_d">15-16</label>
-                        <label class="ev_date_m">сентября</label>
+{#                        <label class="ev_date_d">{{ i.pop }}</label>#}
+{#                        <label class="ev_date_m">{{ i.pop }}</label>#}
+
                     </div>
                 </div>
                 <div class="row m-0 align-items-center pt-3 px-4">
-                    <i class="fas fa-flag"></i><label class="ev_place">Москва, Россия</label>
+{#                    <i class="fas fa-flag"></i><label class="ev_place">{{ i.pop }}</label>#}
                 </div>
                 <div class="row m-0 py-3 justify-content-center px-4">
-                    <label>На тренинге «Построить свой путь» с Александром Белым вы не проНа тренинге «Построить свой путь» с Александром Белым вы не проНа тренинге «Построить свой путь» с Александром Белым вы не проНа тренинге «Построить свой путь» с Александром Белым вы не проНа тренинге «Построить свой путь» с Александром Белым вы не проНа тренинге «Построить свой путь» с Александром Белым вы не про</label>
+{#                    <label>{{ i.pop }}</label>#}
                 </div>
             </div>
-            <div class="mt-4 event p-0 mx-3">
-                <!-- <div class="col-3 mt-4 event p-0 mx-3"> -->
-                <div class="row m-0 ev_name_date py-3 px-4 align-items-center">
-                    <div class="col-8 p-0">
-                        <label class="ev_name">Построй свой путь</label>
-                    </div>
-                    <div class="col-4 p-0 text-center">
-                        <label class="ev_date_d">15-16</label>
-                        <label class="ev_date_m">сентября</label>
-                    </div>
-                </div>
-                <div class="row m-0 align-items-center pt-3 px-4">
-                    <i class="fas fa-flag"></i><label class="ev_place">Москва, Россия</label>
-                </div>
-                <div class="row m-0 py-3 justify-content-center px-4">
-                    <label>На тренинге «Построить свой путь» с Александром Белым вы не проНа тренинге «Построить свой путь» с Александром Белым вы не проНа тренинге «Построить свой путь» с Александром Белым вы не проНа тренинге «Построить свой путь» с Александром Белым вы не проНа тренинге «Построить свой путь» с Александром Белым вы не проНа тренинге «Построить свой путь» с Александром Белым вы не про</label>
-                </div>
-            </div>
-            <div class="mt-4 event p-0 mx-3">
-                <!-- <div class="col-3 mt-4 event p-0 mx-3"> -->
-                <div class="row m-0 ev_name_date py-3 px-4 align-items-center">
-                    <div class="col-8 p-0">
-                        <label class="ev_name">Построй свой путь</label>
-                    </div>
-                    <div class="col-4 p-0 text-center">
-                        <label class="ev_date_d">15-16</label>
-                        <label class="ev_date_m">сентября</label>
-                    </div>
-                </div>
-                <div class="row m-0 align-items-center pt-3 px-4">
-                    <i class="fas fa-flag"></i><label class="ev_place">Москва, Россия</label>
-                </div>
-                <div class="row m-0 py-3 justify-content-center px-4">
-                    <label>На тренинге «Построить свой путь» с Александром Белым вы не проНа тренинге «Построить свой путь» с Александром Белым вы не проНа тренинге «Построить свой путь» с Александром Белым вы не проНа тренинге «Построить свой путь» с Александром Белым вы не проНа тренинге «Построить свой путь» с Александром Белым вы не проНа тренинге «Построить свой путь» с Александром Белым вы не про</label>
-                </div>
-            </div>
+            {% endfor %}
+
         </div>
     </div>
     <div class="news_layer my-5 align-items-center">
@@ -174,7 +144,26 @@
     </div>
     <div class="articles">
         <div class="row m-0 justify-content-center">
+            {% for i in articles %}
             <div class="mt-4 article p-0 mx-3">
+                <div class="row m-0">
+                    <label class="article_name">
+                        {{ i.pop }}
+                    </label>
+                </div>
+                <div class="row m-0 mt-5">
+                    <label class="article_text">
+                        {{ i.pop }}
+                    </label>
+                </div>
+                <div class="row m-0">
+                    <div class="col-3">
+                        <img class="img_s w-100 mt-5" src="{% static 'image/success.png' %}">
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!--<div class="mt-4 article p-0 mx-3">
                 <div class="row m-0">
                     <label class="article_name">
                         ХАРИЗМА ЛИДЕРА: ИМИДЖ И МИСТИКА, ПСИХОЛОГИЯ И ВЛАСТЬ
@@ -221,7 +210,7 @@
                 </div>
                 <div class="row m-0">
                     <div class="col-3">
-                        <img class="img_s w-100 mt-5" src="{% static 'image/succes.png' %}">
+                        <img class="img_s w-100 mt-5" src="{% static 'image/success.png' %}">
                     </div>
                 </div>
             </div>
@@ -238,27 +227,10 @@
                 </div>
                 <div class="row m-0">
                     <div class="col-3">
-                        <img class="img_s w-100 mt-5" src="{% static 'image/succes.png' %}">
+                        <img class="img_s w-100 mt-5" src="{% static 'image/success.png' %}">
                     </div>
                 </div>
-            </div>
-            <div class="mt-4 article p-0 mx-3">
-                <div class="row m-0">
-                    <label class="article_name">
-                        ХАРИЗМА ЛИДЕРА: ИМИДЖ И МИСТИКА, ПСИХОЛОГИЯ И ВЛАСТЬ
-                    </label>
-                </div>
-                <div class="row m-0 mt-5">
-                    <label class="article_text">
-                        Харизме научиться невозможно. Но можно развить способность оказХаризме научиться невозможно. Но можно развить способность оказХаризме научиться невозможно. Но можно развить способность оказХаризме научиться невозможно. Но можно развить способность оказХаризме научиться невозможно. Но можно развить способность оказ
-                    </label>
-                </div>
-                <div class="row m-0">
-                    <div class="col-3">
-                        <img class="img_s w-100 mt-5" src="{% static 'image/succes.png' %}">
-                    </div>
-                </div>
-            </div>
+            </div>-->
         </div>
     </div>
     <!-- <footer> -->

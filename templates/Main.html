@@ -106,15 +106,13 @@
         {% endfor %}
     </ol>
     <div class="carousel-inner">
-        {% for i in news %}
-      <div class="carousel-item {{ i.pop }}">
-        <img src="{{ i.pop }}" class="d-block w-100" alt="...">
+        {% for i in news1 %}
+{#      <div class="carousel-item {{ i.pop }}">#}
+        <img src="{{MEDIA_URL}}{{ i.img_path.url }}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block car_text">
-            <label class="news_name">{{ i.pop }}</label>
-{#          <h5>{{ i.pop }}</h5>#}
+{#            <label class="news_name">{{ i.pop }}</label>#}
             <hr class="news_line">
-            <label class="news_text">{{ i.pop }}</label>
-{#          <p>{{ i.pop }}</p>#}
+{#            <label class="news_text">{{ i.pop }}</label>#}
         </div>
       </div>
         {% endfor %}

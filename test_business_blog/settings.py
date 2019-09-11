@@ -17,7 +17,7 @@ import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROJECT_ROOT   =   os.path.abspath(os.path.dirname(__file__)+"../../")
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__)+"../../")
 sys.path.append("..")
 
 # Quick-start development settings - unsuitable for production
@@ -136,10 +136,13 @@ USE_TZ = True
 #PROJECT_ROOT   =   os.path.abspath(os.path.dirname(__file__)+"../../../")
 
 STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'static')
-MEDIA_ROOT  =   os.path.join(PROJECT_ROOT, 'media')
+MEDIA_ROOT  =   os.path.join(BASE_DIR, 'media')
+
+# STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, "static"),)
 STATIC_URL = '/static/'
 #STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+
 
 # Extra lookup directories for collectstatic to find static files
 #STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfiles'),)

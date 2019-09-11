@@ -17,7 +17,7 @@ import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__)+"../../")
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__)+"../../../")
 sys.path.append("..")
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +27,7 @@ sys.path.append("..")
 SECRET_KEY = ')dps2l_-v8c^080_8vm_v(m%0-^k#e-2)0dnw+0w@d$@((#be1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -135,8 +135,9 @@ USE_TZ = True
 #PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
 #PROJECT_ROOT   =   os.path.abspath(os.path.dirname(__file__)+"../../../")
 
-STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'static')
-MEDIA_ROOT  =   os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 # STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, "static"),)
 STATIC_URL = '/static/'
@@ -145,7 +146,6 @@ MEDIA_URL = '/media/'
 
 
 # Extra lookup directories for collectstatic to find static files
-#STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfiles'),)
 #django_heroku.settings(locals())
 
 #  Add configuration for static files storage using whitenoise

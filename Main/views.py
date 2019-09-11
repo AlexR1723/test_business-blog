@@ -35,11 +35,11 @@ def Main(request):
             new.append('')
 
         news.append(new)
-
+    # print(news)
     news_slide=[]
     cnt=len(news1)
     ch1=False
-    print(cnt)
+    # print(cnt)
     i=0
     while i < cnt:
         news_slide1=[]
@@ -59,4 +59,36 @@ def Main(request):
         art.append(i.text)
         art.reverse()
         articles.append(art)
+
+    reviews1= models.Reviews.objects.all()
+    rews = []
+    ch = False;
+    for i in reviews1:
+        rew = []
+        rew.append(i.text)
+        rew.append(i.city+', '+i.country)
+        rew.append(i.position)
+        rew.append(i.name)
+        if (ch == False):
+            rew.append('active')
+            ch = True
+        else:
+            rew.append('')
+
+        rews.append(rew)
+    # print(news)
+    rews_slide = []
+    cnt = len(reviews1)
+    ch1 = False
+    i = 0
+    while i < cnt:
+        rews_slide1 = []
+        rews_slide1.append(i)
+        if ch1 == False:
+            rews_slide1.append('active')
+        else:
+            rews_slide1.append('')
+        rews_slide.append(rews_slide1)
+        i = i + 1
+
     return render(request, 'Main.html', locals())

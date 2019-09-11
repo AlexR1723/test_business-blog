@@ -18,3 +18,21 @@ class NewsAdmin(admin.ModelAdmin):
         model = News
 
 admin.site.register(News, NewsAdmin)
+
+
+class ArticlesAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in Articles._meta.fields]
+
+    class Meta:
+        model = Articles
+
+admin.site.register(Articles, ArticlesAdmin)
+
+
+class ReviewsAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in Reviews._meta.fields]
+
+    class Meta:
+        model = Reviews
+
+admin.site.register(Reviews, ReviewsAdmin)

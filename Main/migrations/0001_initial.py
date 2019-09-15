@@ -47,7 +47,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(blank=True, max_length=100, null=True, verbose_name='Заголовок')),
                 ('text', models.CharField(blank=True, max_length=500, null=True, verbose_name='Текст')),
-                ('img_path', models.ImageField(blank=True, null=True, upload_to='upload/', verbose_name='Изображение')),
+                ('img_path', models.ImageField(blank=True, null=True, upload_to='uploads/', verbose_name='Изображение')),
             ],
             options={
                 'verbose_name_plural': 'Новости',
@@ -63,7 +63,7 @@ class Migration(migrations.Migration):
                 ('city', models.CharField(blank=True, max_length=50, null=True, verbose_name='Город')),
                 ('country', models.CharField(blank=True, max_length=50, null=True, verbose_name='Страна')),
                 ('text', models.CharField(blank=True, max_length=500, null=True, verbose_name='Текст')),
-                ('img_path', models.ImageField(blank=True, null=True, upload_to='upload/', verbose_name='Картинка')),
+                ('img_path', models.ImageField(blank=True, null=True, upload_to='uploads/', verbose_name='Картинка')),
                 ('position', models.CharField(blank=True, max_length=100, null=True, verbose_name='Должность')),
             ],
             options={

@@ -42,6 +42,8 @@
             </div>
         </div>
     </div>
+
+
     <div class="banner">
         <div class="img_text">
             <label class="it1">ХОЧЕШЬ СТАТЬ УСПЕШНЫМ?</label>
@@ -76,24 +78,6 @@
     </div>
 
 
-{#    <div id="news" class="news_layer my-5 align-items-center">#}
-{#        {% for i in news %}#}
-{#            <div class="row my-4 news1 align-items-center">#}
-{#            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-4 p-0" style="overflow: hidden">#}
-{#                <img class="img_news h-100" src="{{ i.pop }}">#}
-{#            </div>#}
-{#            <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-8">#}
-{#                <div class="row m-0">#}
-{#                    <label class="news_name">{{ i.pop }}</label>#}
-{#                    <hr class="news_line">#}
-{#                    <label class="news_text">{{ i.pop }}</label>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#        {% endfor %}#}
-{#    </div>#}
-
-
     <div id="news" class="news_carousel">
     <label class="lb_events w-100 my-5">НОВОСТИ</label>
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -105,7 +89,6 @@
     <div class="carousel-inner">
         {% for i in news %}
       <div class="carousel-item {{ i.pop }}">
-{#      {{ i.pop }}#}
         <img src="{{MEDIA_URL}}{{ i.pop.url }}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block car_text">
             <label class="news_name">{{ i.pop }}</label>
@@ -152,6 +135,7 @@
         </div>
     </div>
 
+
     <div id="reviews">
         <label class="lb_events w-100 my-5">ОТЗЫВЫ</label>
          <div id="carouselreviews" class="carousel slide" data-ride="carousel">
@@ -163,15 +147,10 @@
     <div class="carousel-inner">
         {% for i in rews %}
       <div class="carousel-item {{ i.pop }}">
-{#      {{ i.pop }}#}
-{#        <img src="{{MEDIA_URL}}{{ i.pop.url }}" class="d-block w-100" alt="...">#}
-{#        <div class="carousel-caption d-none d-md-block car_text">#}
             <label class="rews1">{{ i.pop }}</label>
-{#            <hr class="news_line">#}
             <label class="rews2">{{ i.pop }}</label>
             <label class="rews3">{{ i.pop }}</label>
             <label class="rews4">{{ i.pop }}</label>
-{#        </div>#}
       </div>
         {% endfor %}
     </div>

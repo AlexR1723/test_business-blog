@@ -29,7 +29,6 @@ class Events(models.Model):
     class Meta:
         managed = False
         db_table = 'events'
-        # verbose_name = 'Уже скоро'
         verbose_name_plural = 'Уже скоро'
 
 

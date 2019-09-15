@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Django default" uuid="ac2617d4-59ea-4e5b-855c-8c767b6ae965">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>$PROJECT_DIR$/test_business_blog/settings.py</remarks>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://ec2-54-247-72-30.eu-west-1.compute.amazonaws.com:5432/d167r9uq2uc1ln</jdbc-url>
-    </data-source>
     <data-source source="LOCAL" name="d167r9uq2uc1ln@ec2-54-247-72-30.eu-west-1.compute.amazonaws.com" uuid="8993b4bc-965d-4a16-ab1e-c57bc78c81cf">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>

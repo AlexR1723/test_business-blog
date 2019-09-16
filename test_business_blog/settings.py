@@ -82,18 +82,18 @@ WSGI_APPLICATION = 'test_business_blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME':'d167r9uq2uc1ln',
-        # 'USER': 'zgajoeuhvmveam',
-        # 'PASSWORD':'a81af1d4e4a248e549a8de77b9276d9b54a3c08940a8b229c5b445c83ba65903',
-        # 'HOST':'ec2-54-247-72-30.eu-west-1.compute.amazonaws.com',
-        # 'PORT':'5432'
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':'d9ssi62qq7ri0f',
-        'USER': 'scwqvdslclcdbe',
-        'PASSWORD':'52d2add35d5a26d550775ea995ec29145d8fb0cef44242a1f176b1d2b188a946',
-        'HOST':'ec2-174-129-18-42.compute-1.amazonaws.com',
+        'NAME':'d167r9uq2uc1ln',
+        'USER': 'zgajoeuhvmveam',
+        'PASSWORD':'a81af1d4e4a248e549a8de77b9276d9b54a3c08940a8b229c5b445c83ba65903',
+        'HOST':'ec2-54-247-72-30.eu-west-1.compute.amazonaws.com',
         'PORT':'5432'
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'NAME':'d9ssi62qq7ri0f',
+        # 'USER': 'scwqvdslclcdbe',
+        # 'PASSWORD':'52d2add35d5a26d550775ea995ec29145d8fb0cef44242a1f176b1d2b188a946',
+        # 'HOST':'ec2-174-129-18-42.compute-1.amazonaws.com',
+        # 'PORT':'5432'
     }
 }
 

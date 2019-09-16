@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from Main import models
+from datetime import date, datetime, time
+from babel.dates import format_date, format_datetime, format_time
 
 
 #from django.contrib.auth.models import User
@@ -15,8 +17,10 @@ def Main(request):
         ev = []
         ev.append(i.text)
         ev.append(i.place_city+','+i.place_country)
-        ev.append(i.date_end.strftime("%#d %b %y"))
-        ev.append(i.date_start.strftime("%#d %b %y"))
+        ev.append(format_date(i.date_end, locale='ru'))
+        ev.append(format_date(i.date_start, locale='ru'))
+        # ev.append(i.date_end.strftime("%#d %b %y"))
+        # ev.append(i.date_start.strftime("%#d %b %y"))
         ev.append(i.name)
         events.append(ev)
 

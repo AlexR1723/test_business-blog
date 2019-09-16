@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Main',
+    'imagekit',
 ]
 
 MIDDLEWARE = [
@@ -144,3 +145,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+DROPBOX_OAUTH2_TOKEN = 'j9bzUAQ6_6AAAAAAAAAAG2vqq5_P0m6KVjZX1Qg7LyHJWsZB4erJVsCINnALvdHD'
+DROPBOX_ROOT_PATH = '/media/'

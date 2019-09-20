@@ -1,31 +1,54 @@
+/*@font-face{*/
+/*font-family: 'Blogger Sans';*/
+/*src: url('/static/fonts/Blogger Sans.otf');*/
+/*url('/static/fonts/Blogger Sans.otf') format('otf');*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
+/*}*/
+/*@font-face{*/
+/*font-family: 'Blogger Sans';*/
+/*src: url('/static/fonts/Blogger Sans-Bold.otf');*/
+/*url('/static/fonts/Blogger Sans-Bold.otf') format('otf');*/
+/*font-weight: bold;*/
+/*font-style: normal;*/
+/*}*/
+/*@font-face{*/
+/*font-family: 'Blogger Sans';*/
+/*src: url('/static/fonts/Blogger Sans-Light.otf');*/
+/*url('/static/fonts/Blogger Sans-Light.otf') format('otf');*/
+/*font-weight: 200;*/
+/*font-style: normal;*/
+/*}*/
+/*@font-face{*/
+/*font-family: 'Houschka Rounded Bold';*/
+/*src: url('/static/fonts/houchka.otf');*/
+/*url('/static/fonts/houchka.otf') format('otf');*/
+/*font-weight: bold;*/
+/*font-style: normal;*/
+/*}*/
+
 @font-face{
-font-family: 'Blogger Sans';
-src: url('/static/fonts/Blogger Sans.otf');
-url('/static/fonts/Blogger Sans.otf') format('otf');
+font-family: 'Oswald';
+src: url('/static/fonts/Oswald-Bold.ttf');
+url('/static/fonts//Oswald-Bold.ttf') format('ttf');
+font-weight: bold;
+font-style: normal;
+}
+@font-face{
+font-family: 'Oswald';
+src: url('/static/fonts/Oswald-Regular.ttf');
+url('/static/fonts//Oswald-Regular.ttf') format('ttf');
 font-weight: normal;
 font-style: normal;
 }
 @font-face{
-font-family: 'Blogger Sans';
-src: url('/static/fonts/Blogger Sans-Bold.otf');
-url('/static/fonts/Blogger Sans-Bold.otf') format('otf');
-font-weight: bold;
+font-family: 'Merriweather Regular';
+src: url('/static/fonts/Merriweather-Regular.ttf');
+url('/static/fonts//Merriweather-Regular.ttf') format('ttf');
+font-weight: normal;
 font-style: normal;
 }
-@font-face{
-font-family: 'Blogger Sans';
-src: url('/static/fonts/Blogger Sans-Light.otf');
-url('/static/fonts/Blogger Sans-Light.otf') format('otf');
-font-weight: 200;
-font-style: normal;
-}
-@font-face{
-font-family: 'Houschka Rounded Bold';
-src: url('/static/fonts/houchka.otf');
-url('/static/fonts/houchka.otf') format('otf');
-font-weight: bold;
-font-style: normal;
-}
+
 .header_bg{
 	background-color: #00010b;
 	margin: 0px;
@@ -35,18 +58,19 @@ font-style: normal;
 	color: #be222f;
 	margin: 0px;
 	font-weight: bold;
-	font-family: "Houschka Rounded Bold";
+	font-family: "Oswald";
 
 }
 .lb_events{
 	color: black;
 	text-align: center;
-	font-family: "Houschka Rounded Bold";
+	font-family: "Oswald";
+	font-weight: bold;
 }
 .ev_name{
 	color: black;
 	font-size: 30px;
-	font-family: "Houschka Rounded Bold";
+	font-family: "Oswald";
 	margin: 0px;
 }
 .ev_name_date{
@@ -55,13 +79,13 @@ font-style: normal;
 .ev_date{
 	color: #8b0017;
 	font-size: 25px;
-	font-family: "Houschka Rounded Bold";
+	font-family: "Oswald";
 	margin: 0px;
 	width: 100%;
 	text-align: center;
 }
 .ev_text{
-	font-family: "Blogger Sans";
+	font-family: "Merriweather Regular";
 	font-weight: normal;
 	font-size: 20px;
 }
@@ -69,7 +93,7 @@ font-style: normal;
 	color: #0a6b7c;
 	font-size: 25px;
 	font-weight: bold;
-	font-family: "Blogger Sans";
+	font-family: "Oswald";
 	margin: 0px;
 	margin-left: 10px;
 }
@@ -156,14 +180,16 @@ font-style: normal;
 	width: 100%;
 	text-align: center;
 	margin: 0px;
-	font-family: "Houschka Rounded Bold";
+	font-family: "Oswald";
+	font-weight: normal;
 }
 .it2{
 	color: white;
 	width: 100%;
 	text-align: center;
 	margin: 0px;
-	font-family: "Houschka Rounded Bold";
+	font-family: "Oswald";
+	font-weight: normal;
 }
 .news_layer{
 	color: white;
@@ -176,18 +202,18 @@ font-style: normal;
 .news_name{
 	font-size: 30px;
 	font-weight: bold;
-	font-family: "Blogger Sans";
+	font-family: "Oswald";
 }
 .news_line{
 	width: 100%;
 	margin: 0px;
-	font-family: "Blogger Sans";
-	font-weight: 200;
+	/*font-family: "Oswald";*/
+	/*font-weight: 200;*/
 	border-top: 3px solid white;
 }
 .news_text{
 	font-size: 20px;
-	font-weight: 500;
+	font-family: "Merriweather Regular";
 }
 .news1{
 	background-color: #119bb3;
@@ -205,11 +231,11 @@ font-style: normal;
 	text-decoration: underline;
 	font-size: 30px;
 	font-weight: bold;
-	font-family: "Blogger Sans";
+	font-family: "Oswald";
 }
 .article_text{
 	font-size: 20px;
-	font-family: "Blogger Sans";
+	font-family: "Merriweather Regular";
 	font-weight: 200;
 }
 .footer{ 
@@ -251,28 +277,29 @@ font-style: normal;
 .rews1{
 	font-size: 30px;
 	width: 100%;
-	font-family: "Houschka Rounded Bold";
+	font-family: "Oswald";
+	font-weight: bold;
 	margin: 0px;
 }
 .rews2{
 	font-size: 25px;
 	width: 100%;
-	font-family: "Houschka Rounded Bold";
+	font-family: "Oswald";
+	font-weight: bold;
 	margin: 0px;
 }
 
 .rews3{
 	font-size: 20px;
 	width: 100%;
-	font-family: "Blogger Sans";
-	font-weight: bold;
+	font-family: "Oswald";
+	font-weight: normal;
 	margin: 0px;
 }
 .rews4{
 	font-size: 20px;
 	width: 100%;
-	font-family: "Blogger Sans";
-	font-weight: normal;
+	font-family: "Merriweather Regular";
 	margin: 0px;
 }
 #carouselreviews{

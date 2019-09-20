@@ -39,11 +39,9 @@ def Main(request):
             new.append('')
 
         news.append(new)
-    # print(news)
     news_slide=[]
     cnt=len(news1)
     ch1=False
-    # print(cnt)
     i=0
     while i < cnt:
         news_slide1=[]
@@ -80,7 +78,6 @@ def Main(request):
             rew.append('')
 
         rews.append(rew)
-    # print(news)
     rews_slide = []
     cnt = len(reviews1)
     ch1 = False

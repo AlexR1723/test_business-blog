@@ -244,13 +244,15 @@ font-style: normal;
 
 .footer_name{
 	color: #be222f;
-	font-weight: 500; 
+    font-family: Oswald;
+    font-weight: bold;
 	width: 100%; 
 	text-align: center;
 }
 .footer_phone{
 	color: #a6a6a6;
-	font-weight: 500;
+	font-family: Oswald;
+    font-weight: bold;
 	width: 100%;
 	text-align: center;
 }
@@ -306,4 +308,9 @@ font-style: normal;
 	margin: auto;
 	background-color: rgba(0,150,180,0.9);
 	color: #eee;
+}
+
+.nav-link{
+    font-family: Oswald;
+    font-weight: normal;
 }
